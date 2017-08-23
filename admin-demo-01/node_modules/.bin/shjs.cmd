@@ -1,0 +1,7 @@
+@IF EXIST "%~dp0\node.exe" (
+  "%~dp0\node.exe"  "%~dp0\..\_shelljs@0.7.8@shelljs\bin\shjs" %*
+) ELSE (
+  @SETLOCAL
+  @SET PATHEXT=%PATHEXT:;.JS;=;%
+  node  "%~dp0\..\_shelljs@0.7.8@shelljs\bin\shjs" %*
+)
